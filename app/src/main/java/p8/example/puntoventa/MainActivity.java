@@ -9,7 +9,7 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private CardView altaCard, preciosCard, ventaCard, reporteCard, proveedoresCard, inventarioCard;
+    private CardView altaCard, preciosCard, ventaCard, reporteCard, proveedoresCard, inventarioCard, quejasCard;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         reporteCard = (CardView) findViewById(R.id.reporte);
         proveedoresCard = (CardView) findViewById(R.id.proveedores);
         inventarioCard = (CardView) findViewById(R.id.inventario);
+        quejasCard = (CardView) findViewById(R.id.quejas);
 
         altaCard.setOnClickListener(this);
         preciosCard.setOnClickListener(this);
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         reporteCard.setOnClickListener(this);
         proveedoresCard.setOnClickListener(this);
         inventarioCard.setOnClickListener(this);
+        quejasCard.setOnClickListener(this);
 
     }
 
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.reporte: i = new Intent(this, ReporteProductos.class);startActivity(i);break;
             case R.id.proveedores: i = new Intent(this, Proveedores.class);startActivity(i);break;
             case R.id.inventario: i = new Intent(this, Inventario.class);startActivity(i);break;
+
             default:break;
 
         }

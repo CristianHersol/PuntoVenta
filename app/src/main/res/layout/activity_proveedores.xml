@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Proveedores">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="proveedores"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="120dp" />
 </android.support.constraint.ConstraintLayout>
