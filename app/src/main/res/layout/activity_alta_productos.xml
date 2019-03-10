@@ -1,168 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".AltaProductos">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="ALTA DE PRODUCTOS"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_row="0"
+        android:layout_column="0">
 
-    <EditText
-        android:id="@+id/txtnCProducto"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="28dp"
-        android:background="#E9E9E9"
-        android:drawableLeft="@drawable/codigo"
-        android:ems="10"
-        android:hint="Codigo del producto"
-        android:inputType="number"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="20dp">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="43dp"
-        android:layout_height="45dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toEndOf="@+id/txtnCProducto"
-        app:layout_constraintTop_toTopOf="@+id/guideline"
-        app:layout_constraintVertical_bias="0.042"
-        app:srcCompat="@drawable/qr" />
+            <TextView
+                android:id="@+id/txtPuntoVenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto Venta"
+                android:textColor="#FFF"
+                android:textSize="22sp" />
 
-    <EditText
-        android:id="@+id/txteNProducto"
-        android:layout_width="267dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="24dp"
-        android:background="#FFE9E9E9"
-        android:drawableLeft="@drawable/name"
-        android:ems="10"
-        android:hint="Nombre producto"
-        android:inputType="text"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtnCProducto" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtPuntoVenta"
+                android:layout_marginTop="6dp"
+                android:text="Alta Productos"
+                android:textColor="#52BAFF"
+                android:textSize="14sp" />
 
-    <EditText
-        android:id="@+id/txtnCantidad"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="220dp"
-        android:background="#FFE9E9E9"
-        android:ems="10"
-        android:hint="Cantidad"
-        android:inputType="number"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/lg" />
 
-    <Spinner
-        android:id="@+id/spnCategoria"
-        android:layout_width="266dp"
-        android:layout_height="39dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="#FFE9E9E9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txteNProducto" />
+        </RelativeLayout>
 
-    <EditText
-        android:id="@+id/txtnCompra"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="292dp"
-        android:background="#FFE9E9E9"
-        android:ems="10"
-        android:hint="Costo Compra"
-        android:inputType="number"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnCategoria"
-        app:layout_constraintVertical_bias="0.947" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
 
-    <EditText
-        android:id="@+id/txtnVenta"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="292dp"
-        android:background="#FFE9E9E9"
-        android:ems="10"
-        android:hint="Costo Venta"
-        android:inputType="number"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtnCompra" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="99dp" />
+                <EditText
+                    android:id="@+id/txtnCProducto"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:background="#E9E9E9"
+                    android:drawableLeft="@drawable/codigo"
+                    android:hint="Codigo del producto"
+                    android:inputType="number"
+                    android:padding="10dp"/>
 
-</android.support.constraint.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="33dp"
+                    android:layout_height="34dp"
+                    app:srcCompat="@drawable/qr2"
+                    android:layout_marginLeft="275dp"
+                    android:layout_marginTop="-40dp"/>
+
+                <EditText
+                    android:id="@+id/txtNombre"
+                    android:layout_width="267dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE9E9E9"
+                    android:drawableLeft="@drawable/name"
+                    android:hint="Ingrese Nombre producto"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/txtnCantidad"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE9E9E9"
+                    android:hint="Cantidad"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/txtnCompra"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE9E9E9"
+                    android:hint="Costo Compra"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:id="@+id/txtnVenta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE9E9E9"
+                    android:ems="10"
+                    android:hint="Costo Venta"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:layout_marginTop="20dp"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</GridLayout>
